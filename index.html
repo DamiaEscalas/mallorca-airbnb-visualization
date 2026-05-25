@@ -2,162 +2,832 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Airbnb Mallorca</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb Mallorca - Análisis de Datos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #edf2ff 0%, #d5e4ff 100%);
+            color: #111111;
+            padding: 55px 20px;
+            text-align: center;
+            box-shadow: inset 0 -1px 0 rgba(102, 126, 234, 0.18);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 12px;
+            font-weight: 800;
+            text-shadow: none;
+            color: #111111;
+        }
+
+        header p {
+            font-size: 1.05em;
+            opacity: 0.92;
+            max-width: 820px;
+            margin: 0 auto;
+            line-height: 1.75;
+            color: #1f1f1f;
+        }
+
+        section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 42px;
+            background: transparent;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+            transition: background 0.3s ease;
+            position: relative;
+        }
+
+        section+section {
+            margin-top: 0;
+            border-top: 1px solid rgba(102, 126, 234, 0.14);
+            padding-top: 40px;
+        }
+
+        section:hover {
+            background: rgba(255, 255, 255, 0.55);
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #764ba2;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #764ba2;
+            padding-bottom: 8px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+
+        .viz-container {
+            max-width: 1300px;
+            margin: 30px auto;
+            padding: 22px;
+            background: rgba(248, 249, 250, 0.82);
+            border-radius: 18px;
+            border-left: 4px solid #667eea;
+        }
+
+        .tableauPlaceholder,
+        .flourish-embed {
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        footer p {
+            color: white;
+            margin: 5px 0;
+        }
+
+        .note {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            section {
+                margin: 20px 15px;
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            .viz-container {
+                margin: 20px 0;
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<h1>Mapa temporal de Airbnb en Mallorca</h1>
+    <header>
 
-<p>
-Visualización de la expansión del mercado de alquiler turístico en Mallorca.
-</p>
-  
-<div style="max-width:1200px; margin:40px auto;">
+        <h1>La transformación del mercado Airbnb en Mallorca</h1>
 
-<div class='tableauPlaceholder'
-     id='viz1779202988358'
-     style='position: relative; width:100%;'>
+        <p>
+            Exploración visual sobre la expansión del alquiler turístico,
+            la profesionalización del mercado y las dinámicas territoriales
+            de Airbnb en Mallorca.
+        </p>
+    </header>
 
-<noscript>
-    <a href='#'>
-        <img alt='Hoja 1 - 2025'
-             src='https://public.tableau.com/static/images/Ti/Timelapse_Mallorca_AirBnB/Hoja1/1_rss.png'
-             style='border: none' />
-    </a>
-</noscript>
 
-<object class='tableauViz' style='display:none;'>
+    <section>
+        <h1>La expansión de Airbnb en Mallorca</h1>
 
-    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-    <param name='embed_code_version' value='3' />
-    <param name='site_root' value='' />
-    <param name='name' value='Timelapse_Mallorca_AirBnB/Hoja1' />
+        <p>
+            Durante la última década, Airbnb ha transformado profundamente
+            el mercado turístico y residencial de Mallorca.
+        </p>
 
-    <param name='tabs' value='no' />
+        <p>
+            La siguiente visualización muestra cómo los alojamientos
+            se han expandido progresivamente por el territorio.
+        </p>
 
-    <param name='toolbar' value='yes' />
+        <p>
+            ▶ Pulsa <strong>Play</strong> para visualizar la evolución temporal del mercado.
+        </p>
 
-    <param name='static_image'
-           value='https://public.tableau.com/static/images/Ti/Timelapse_Mallorca_AirBnB/Hoja1/1.png' />
 
-    <param name='animate_transition' value='yes' />
-    <param name='display_static_image' value='yes' />
-    <param name='display_spinner' value='yes' />
-    <param name='display_overlay' value='yes' />
-    <param name='display_count' value='yes' />
-    <param name='language' value='es-ES' />
+        <div class="viz-container">
 
-</object>
-</div>
+            <div class='tableauPlaceholder' id='viz1779202988358' style='position: relative; width:100%;'>
 
-<script type='text/javascript'>
+                <noscript>
+                    <a href='#'>
+                        <img alt='Hoja 1 - 2025'
+                            src='https://public.tableau.com/static/images/Ti/Timelapse_Mallorca_AirBnB/Hoja1/1_rss.png'
+                            style='border: none' />
+                    </a>
+                </noscript>
 
-    var divElement = document.getElementById('viz1779202988358');
-    var vizElement = divElement.getElementsByTagName('object')[0];
+                <object class='tableauViz' style='display:none;'>
 
-    divElement.style.width = '100%';
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='Timelapse_Mallorca_AirBnB/Hoja1' />
 
-    vizElement.style.width = '100%';
-    vizElement.style.height = '650px';
+                    <param name='tabs' value='no' />
 
-    var scriptElement = document.createElement('script');
-    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                    <param name='toolbar' value='yes' />
 
-    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/Ti/Timelapse_Mallorca_AirBnB/Hoja1/1.png' />
 
-</script>
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='es-ES' />
 
-</div>
+                </object>
+            </div>
 
-<h1>Evolución del mercado Airbnb</h1>
+            <script type='text/javascript'>
 
-<p>
-Crecimiento acumulado del mercado y nuevas incorporaciones según el perfil del anfitrión.
-</p>
+                var divElement = document.getElementById('viz1779202988358');
+                var vizElement = divElement.getElementsByTagName('object')[0];
 
-<div style="max-width:1200px; margin:40px auto;">
+                divElement.style.width = '100%';
 
-<div class='tableauPlaceholder'
-     id='viz1779281384934'
-     style='position: relative; width:100%;'>
+                vizElement.style.width = '100%';
+                vizElement.style.height = '650px';
 
-<noscript>
-    <a href='#'>
-        <img alt='Evolución Mercado'
-             src='https://public.tableau.com/static/images/Ti/Timelapse_Mallorca_AirBnB/Dashboard1/1_rss.png'
-             style='border: none' />
-    </a>
-</noscript>
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
 
-<object class='tableauViz' style='display:none;'>
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
 
-    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-    <param name='embed_code_version' value='3' />
-    <param name='site_root' value='' />
+            </script>
 
-    <param name='name'
-           value='Timelapse_Mallorca_AirBnB/Dashboard1' />
+        </div>
 
-    <param name='tabs' value='no' />
-    <param name='toolbar' value='yes' />
+    </section>
 
-    <param name='static_image'
-           value='https://public.tableau.com/static/images/Ti/Timelapse_Mallorca_AirBnB/Dashboard1/1.png' />
+    <section>
+        <h1>¿Quién controla el mercado Airbnb?</h1>
 
-    <param name='animate_transition' value='yes' />
-    <param name='display_static_image' value='yes' />
-    <param name='display_spinner' value='yes' />
-    <param name='display_overlay' value='yes' />
-    <param name='display_count' value='yes' />
-    <param name='language' value='es-ES' />
+        <p>
+            No todos los anfitriones operan a la misma escala.
+        </p>
 
-</object>
-</div>
+        <p>
+            En este análisis se distinguen tres perfiles:
+            <strong style="color:#F4A261;">Locales</strong>,
+            cuyos alojamientos se concentran principalmente en Mallorca;
+            <strong style="color:#D1495B;">Mixtos</strong>,
+            que aunque operan en distintos mercados mantienen una parte importante
+            de sus propiedades en la isla;
+            y <strong style="color:#30638E;">Globales</strong>,
+            para los que Mallorca representa únicamente una pequeña parte
+            de su cartera total de alojamientos.
+        </p>
 
-<script type='text/javascript'>
+        <div class="viz-container">
 
-    var divElement = document.getElementById('viz1779281384934');
-    var vizElement = divElement.getElementsByTagName('object')[0];
+            <div class="flourish-embed flourish-pictogram" data-src="visualisation/29074848">
 
-    divElement.style.width = '100%';
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
 
-    vizElement.style.width = '100%';
-    vizElement.style.height = '850px';
+                <noscript>
+                    <img src="https://public.flourish.studio/visualisation/29074848/thumbnail" width="100%"
+                        alt="pictogram visualization" />
+                </noscript>
 
-    var scriptElement = document.createElement('script');
-    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            </div>
 
-    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </div>
 
-</script>
+        <p>
+            Los anfitriones <strong style="color:#F4A261;">locales</strong> continúan
+            siendo mayoría dentro de Airbnb en Mallorca,
+            aunque más del 40% de los perfiles ya operan a escalas más amplias y profesionalizadas.
+        </p>
+    </section>
 
-</div>
+    <section>
+        <h1>El crecimiento del mercado Airbnb</h1>
 
-<h1>Distribución de anfitriones</h1>
+        <p>
+            Durante los últimos años, el mercado Airbnb en Mallorca
+            ha experimentado un crecimiento acelerado y sostenido.
+        </p>
 
-<p>
-Proporción de anfitriones según su alcance dentro del mercado turístico de Mallorca.
-</p>
+        <div class="viz-container">
 
-<div style="max-width:1000px; margin:40px auto;">
+            <div class='tableauPlaceholder' id='viz1779281384934' style='position: relative; width:100%;'>
 
-    <div class="flourish-embed flourish-pictogram"
-         data-src="visualisation/29074848">
+                <noscript>
+                    <a href='#'>
+                        <img alt='Evolución Mercado'
+                            src='https://public.tableau.com/static/images/Ti/Timelapse_Mallorca_AirBnB/Dashboard1/1_rss.png'
+                            style='border: none' />
+                    </a>
+                </noscript>
 
-        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                <object class='tableauViz' style='display:none;'>
 
-        <noscript>
-            <img
-                src="https://public.flourish.studio/visualisation/29074848/thumbnail"
-                width="100%"
-                alt="pictogram visualization" />
-        </noscript>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
 
-    </div>
+                    <param name='name' value='Timelapse_Mallorca_AirBnB/Dashboard1' />
 
-</div>
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/Ti/Timelapse_Mallorca_AirBnB/Dashboard1/1.png' />
+
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='es-ES' />
+
+                </object>
+            </div>
+
+            <script type='text/javascript'>
+
+                var divElement = document.getElementById('viz1779281384934');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+
+                divElement.style.width = '100%';
+
+                vizElement.style.width = '100%';
+                vizElement.style.height = '850px';
+
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+
+            </script>
+
+        </div>
+
+        <p>
+            El crecimiento fue especialmente intenso entre 2014 y 2019,
+            periodo en el que el número de alojamientos prácticamente se duplicó
+            en algunos años de expansión acelerada.
+        </p>
+
+        <p>
+            Aunque los anfitriones <strong style="color:#F4A261;">locales</strong>
+            representan la mayor parte de los perfiles dentro de la plataforma,
+            los anfitriones <strong style="color:#D1495B;">mixtos</strong>
+            y <strong style="color:#30638E;">globales</strong>
+            concentran un mayor número de viviendas anunciadas,
+            reflejando una creciente profesionalización del mercado.
+        </p>
+    </section>
+
+    <section>
+
+        <h1>Estacionalidad de la ocupación turística</h1>
+
+        <p>
+            La actividad turística en Mallorca presenta una fuerte dependencia
+            de la temporada alta.
+        </p>
+
+        <p>
+            La siguiente visualización muestra la evolución mensual
+            de la ocupación estimada de los alojamientos Airbnb,
+            reflejando el marcado carácter estacional del mercado.
+        </p>
+
+        <div class="viz-container">
+
+            <div class='tableauPlaceholder' id='viz1779443154481' style='position: relative;'>
+
+                <noscript>
+                    <a href='#'>
+                        <img alt='Porcentaje de ocupación estimado'
+                            src='https://public.tableau.com/static/images/Ai/AirbnbMallorcaOcupacinmensual/Hoja1/1_rss.png'
+                            style='border: none' />
+                    </a>
+                </noscript>
+
+                <object class='tableauViz' style='display:none;'>
+
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+
+                    <param name='embed_code_version' value='3' />
+
+                    <param name='site_root' value='' />
+
+                    <param name='name' value='AirbnbMallorcaOcupacinmensual/Hoja1' />
+
+                    <param name='tabs' value='no' />
+
+                    <param name='toolbar' value='yes' />
+
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/Ai/AirbnbMallorcaOcupacinmensual/Hoja1/1.png' />
+
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='es-ES' />
+
+                </object>
+
+
+            </div>
+
+            <script type='text/javascript'>
+
+                var divElement =
+                    document.getElementById('viz1779443154481');
+
+                var vizElement =
+                    divElement.getElementsByTagName('object')[0];
+
+                vizElement.style.width = '100%';
+
+                vizElement.style.height = '650px';
+
+                var scriptElement =
+                    document.createElement('script');
+
+                scriptElement.src =
+                    'https://public.tableau.com/javascripts/api/viz_v1.js';
+
+                vizElement.parentNode.insertBefore(
+                    scriptElement,
+                    vizElement
+                );
+
+            </script>
+
+        </div>
+
+        <p>
+            Durante los meses de verano, especialmente en julio y agosto,
+            la ocupación supera ampliamente el 65%, mientras que en primavera
+            desciende hasta valores cercanos al 35%.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h1>Diferencias territoriales del mercado Airbnb</h1>
+
+        <p>
+            Algunos municipios concentran un gran volumen de alojamientos,
+            mientras que otros destacan por sus precios elevados
+            o por una ocupación especialmente alta durante la temporada turística.
+        </p>
+
+        <p>
+            La siguiente visualización permite explorar las diferencias territoriales
+            del mercado según distintas métricas clave:
+            número de alojamientos, precio medio y ocupación estimada.
+        </p>
+
+        <p>
+            Utiliza el selector de la derecha para alternar entre indicadores
+            y comparar el comportamiento turístico entre municipios.
+        </p>
+
+        <div class="viz-container">
+
+            <div class='tableauPlaceholder' id='viz1779443561575' style='position: relative;'>
+
+                <noscript>
+                    <a href='#'>
+                        <img alt='Comparativa territorial Airbnb Mallorca'
+                            src='https://public.tableau.com/static/images/Ot/OtrasvisualizacionesAirBnBMallorca/Hoja1/1_rss.png'
+                            style='border: none' />
+                    </a>
+                </noscript>
+
+                <object class='tableauViz' style='display:none;'>
+
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+
+                    <param name='embed_code_version' value='3' />
+
+                    <param name='site_root' value='' />
+
+                    <param name='name' value='OtrasvisualizacionesAirBnBMallorca/Hoja1' />
+
+                    <param name='tabs' value='yes' />
+
+                    <param name='toolbar' value='yes' />
+
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/Ot/OtrasvisualizacionesAirBnBMallorca/Hoja1/1.png' />
+
+                    <param name='animate_transition' value='yes' />
+
+                    <param name='display_static_image' value='yes' />
+
+                    <param name='display_spinner' value='yes' />
+
+                    <param name='display_overlay' value='yes' />
+
+                    <param name='display_count' value='yes' />
+
+                    <param name='language' value='es-ES' />
+
+                </object>
+
+            </div>
+
+            <script type='text/javascript'>
+
+                var divElement =
+                    document.getElementById('viz1779443561575');
+
+                var vizElement =
+                    divElement.getElementsByTagName('object')[0];
+
+                vizElement.style.width = '100%';
+
+                vizElement.style.height = '750px';
+
+                var scriptElement =
+                    document.createElement('script');
+
+                scriptElement.src =
+                    'https://public.tableau.com/javascripts/api/viz_v1.js';
+
+                vizElement.parentNode.insertBefore(
+                    scriptElement,
+                    vizElement
+                );
+
+            </script>
+
+        </div>
+
+    </section>
+
+
+
+    <section>
+
+        <h1>¿Influye el tipo de anfitrión en la experiencia?</h1>
+
+        <p>
+            Las valoraciones de los usuarios permiten analizar
+            cómo varía la experiencia percibida según el tipo de anfitrión.
+        </p>
+
+        <div class="viz-container">
+
+            <div class='tableauPlaceholder' id='viz1779443910525' style='position: relative;'>
+
+                <noscript>
+                    <a href='#'>
+
+                        <img alt='Valoración por tipo de host'
+                            src='https://public.tableau.com/static/images/Ot/OtrasvisualizacionesAirBnBMallorca/Hoja2/1_rss.png'
+                            style='border: none' />
+
+                    </a>
+                </noscript>
+
+                <object class='tableauViz' style='display:none;'>
+
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+
+                    <param name='embed_code_version' value='3' />
+
+                    <param name='site_root' value='' />
+
+                    <param name='name' value='OtrasvisualizacionesAirBnBMallorca/Hoja2' />
+
+                    <param name='tabs' value='no' />
+
+                    <param name='toolbar' value='yes' />
+
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/Ot/OtrasvisualizacionesAirBnBMallorca/Hoja2/1.png' />
+
+                    <param name='animate_transition' value='yes' />
+
+                    <param name='display_static_image' value='yes' />
+
+                    <param name='display_spinner' value='yes' />
+
+                    <param name='display_overlay' value='yes' />
+
+                    <param name='display_count' value='yes' />
+
+                    <param name='language' value='es-ES' />
+
+                </object>
+
+            </div>
+
+            <script type='text/javascript'>
+
+                var divElement =
+                    document.getElementById('viz1779443910525');
+
+                var vizElement =
+                    divElement.getElementsByTagName('object')[0];
+
+                vizElement.style.width = '100%';
+
+                vizElement.style.height = '700px';
+
+                var scriptElement =
+                    document.createElement('script');
+
+                scriptElement.src =
+                    'https://public.tableau.com/javascripts/api/viz_v1.js';
+
+                vizElement.parentNode.insertBefore(
+                    scriptElement,
+                    vizElement
+                );
+
+            </script>
+
+        </div>
+
+        <p>
+            Los anfitriones <strong style="color:#F4A261;">locales</strong> presentan valoraciones ligeramente
+            superiores en la mayoría de categorías, especialmente en comunicación, limpieza y relación calidad-precio.
+            Esto puede indicar un esfuerzo adicional por parte de los anfitriones locales para ofrecer una experiencia
+            más personalizada y adaptada a las expectativas de los turistas.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h1>¿Pagar más implica mejores valoraciones?</h1>
+
+        <p>
+            El precio de un alojamiento no siempre está directamente relacionado
+            con la experiencia percibida por los usuarios.
+        </p>
+
+        <p>
+            Mientras algunos alojamientos mantienen precios relativamente estables,
+            otros segmentos muestran incrementos mucho más pronunciados
+            asociados a puntuaciones más altas.
+        </p>
+
+        <div class="viz-container">
+
+            <div class='tableauPlaceholder' id='viz1779443989317' style='position: relative;'>
+
+                <noscript>
+                    <a href='#'>
+
+                        <img alt='Calidad contra precio'
+                            src='https://public.tableau.com/static/images/Ot/OtrasvisualizacionesAirBnBMallorca/Hoja4/1_rss.png'
+                            style='border: none' />
+
+                    </a>
+                </noscript>
+
+                <object class='tableauViz' style='display:none;'>
+
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+
+                    <param name='embed_code_version' value='3' />
+
+                    <param name='site_root' value='' />
+
+                    <param name='name' value='OtrasvisualizacionesAirBnBMallorca/Hoja4' />
+
+                    <param name='tabs' value='no' />
+
+                    <param name='toolbar' value='yes' />
+
+                    <param name='static_image'
+                        value='https://public.tableau.com/static/images/Ot/OtrasvisualizacionesAirBnBMallorca/Hoja4/1.png' />
+
+                    <param name='animate_transition' value='yes' />
+
+                    <param name='display_static_image' value='yes' />
+
+                    <param name='display_spinner' value='yes' />
+
+                    <param name='display_overlay' value='yes' />
+
+                    <param name='display_count' value='yes' />
+
+                    <param name='language' value='es-ES' />
+
+                </object>
+
+            </div>
+
+            <script type='text/javascript'>
+
+                var divElement =
+                    document.getElementById('viz1779443989317');
+
+                var vizElement =
+                    divElement.getElementsByTagName('object')[0];
+
+                vizElement.style.width = '100%';
+
+                vizElement.style.height = '700px';
+
+                var scriptElement =
+                    document.createElement('script');
+
+                scriptElement.src =
+                    'https://public.tableau.com/javascripts/api/viz_v1.js';
+
+                vizElement.parentNode.insertBefore(
+                    scriptElement,
+                    vizElement
+                );
+
+            </script>
+
+        </div>
+
+        <p class="note">
+            Nota: la escala de valoraciones comienza en 3.5 debido al reducido número
+            de alojamientos con puntuaciones inferiores.
+        </p>
+
+        <p>
+            En general, las mejores valoraciones tienden a asociarse
+            con precios ligeramente superiores. Sin embargo, las diferencias entre
+            tipos de anfitrión sugieren la existencia de segmentos de mercado diferenciados,
+            desde alojamientos más accesibles hasta ofertas claramente orientadas
+            a perfiles premium y de lujo.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h1>¿Quién domina cada segmento del mercado?</h1>
+
+        <p>
+            No todos los anfitriones operan a la misma escala.
+        </p>
+
+        <p>
+            Mientras algunos perfiles se concentran principalmente
+            en alojamientos de precio medio o económico,
+            otros tienen una presencia mucho más destacada
+            dentro del mercado premium y de lujo.
+        </p>
+
+        <div class="viz-container">
+
+            <div class="flourish-embed flourish-sankey" data-src="visualisation/29075705">
+
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+
+                <noscript>
+
+                    <img src="https://public.flourish.studio/visualisation/29075705/thumbnail" width="100%"
+                        alt="Sankey categorías de precio Airbnb Mallorca" />
+
+                </noscript>
+
+            </div>
+
+        </div>
+
+        <p>
+            Los anfitriones <strong style="color:#30638E;">globales</strong>
+            concentran una parte importante de los alojamientos de mayor precio,
+            mientras que los perfiles <strong style="color:#F4A261;">locales</strong>
+            mantienen una presencia más equilibrada en los segmentos medios y económicos.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h1>Conclusiones</h1>
+
+        <p>
+            Durante los últimos años, Airbnb se ha consolidado como uno de los principales
+            actores del mercado turístico en Mallorca.
+        </p>
+
+        <p>
+            La expansión territorial de la plataforma, el crecimiento sostenido del número
+            de alojamientos y la aparición de perfiles de anfitrión cada vez más profesionalizados
+            reflejan una transformación profunda del modelo de alojamiento turístico de la isla.
+        </p>
+
+        <p>
+            El análisis también muestra importantes diferencias entre municipios,
+            así como distintos comportamientos en precio, ocupación y valoraciones
+            según el tipo de anfitrión.
+        </p>
+
+        <p>
+            Aunque los anfitriones <strong style="color:#F4A261;">locales</strong>
+            representan la mayor parte de los perfiles dentro de la plataforma,
+            los anfitriones <strong style="color:#D1495B;">mixtos</strong>
+            y <strong style="color:#30638E;">globales</strong> concentran,
+            de media, un mayor número de alojamientos, además de ser estos más caros.
+        </p>
+
+        <p>
+            En conjunto, los datos evidencian cómo Airbnb ha pasado de ser una plataforma
+            de alojamiento ocasional a convertirse en un mercado turístico altamente estructurado
+            y cada vez más profesionalizado.
+        </p>
+
+    </section>
+
+    <footer>
+        <p>2025 Análisis de Datos - Visualización de Airbnb en Mallorca</p>
+        <p>Datos obtenidos de Inside Airbnb</p>
+    </footer>
 
 </body>
+
 </html>
