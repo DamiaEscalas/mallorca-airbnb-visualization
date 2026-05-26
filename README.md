@@ -2,6 +2,9 @@
 
 Proyecto de visualización de datos centrado en la evolución del mercado Airbnb en Mallorca, explorando su crecimiento, profesionalización y distribución territorial mediante distintas técnicas de visualización interactiva.
 
+Página web del proyecto:  
+https://damiaescalas.github.io/mallorca-airbnb-visualization/
+
 La web combina visualizaciones desarrolladas con:
 - Tableau Public
 - Flourish
