@@ -55,7 +55,6 @@ Para el análisis se definieron tres perfiles de anfitrión:
 - HTML5
 - CSS3
 - Python
-- Pandas
 - Tableau Public
 - Flourish
 - GitHub Pages
@@ -72,10 +71,8 @@ airbnb-mallorca/
 │
 ├── scripts/
 │
-├── visualizations/
-│
 ├── index.html
-├── styles.css
+├── LICENSE
 ├── requirements.txt
 └── README.md
 ```
